@@ -15,5 +15,6 @@ maximo (a:b:c) = let bigger (a,b) = if a > b then a else b in if c==[] then bigg
 minimo (a:b:c) = let smaller (a,b) = if a < b then a else b in if c==[] then smaller(a,b) else minimo ([smaller(a,b)]++c)
 
 
--- funcion que recibe una lista y devuelbe una tupla 
+-- funcion que recibe una lista y devuelbe una tupla con el máximo y el minimo 
+tuplas (max:min) = max = maximo(a:b:c) min = minimo(a:b:c)
 
