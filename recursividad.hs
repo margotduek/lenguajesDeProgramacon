@@ -16,5 +16,26 @@ minimo (a:b:c) = let smaller (a,b) = if a < b then a else b in if c==[] then sma
 
 
 -- funcion que recibe una lista y devuelbe una tupla con el máximo y el minimo 
-tuplas (max:min) = max = maximo(a:b:c) min = minimo(a:b:c)
+-- tuplas (max:min) = max = maximo(a:b:c) min = minimo(a:b:c)
+tupla = (maximo, minimo)
+
+
+
+-- Factorial con recursividad de cola
+let fact_cola (x r) = if(x==1)
+    then r
+    else fact_cola(x-1,r*x)
+--------------------------------
+
+fact 0 sol = sol
+fact 1 sol = sol
+fact x sol = fact(x-1)(x*sol)
+
+--------------------------------
+
+
+-- funcion que haga insertion sort
+ordena(x:y:z) = if x > y
+	      
+    
 
