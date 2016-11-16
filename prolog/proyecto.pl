@@ -30,7 +30,8 @@ delete(node(X, node(Y, Left, Right), empty), X, node(Y, Left, Right )).
 %delete(node(X,empty, node(Y, Left, Right)), X, node(Y, Left, Right )).
 % delete(node(7, node( 5, node(6, empty, empty), empty), empty), 5, B).
 
-%third case
+%third case, father of two childs
+delete(node(X, node(Y, YLeft, YRight), node(Z, _, _)), X, node(Y, node(YLeft, YRight, empty), Z )).
 
 
 delete(node(X, node(Left, Lx, Ly), R), Key, node(X, Out, R)):-
