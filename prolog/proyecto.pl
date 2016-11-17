@@ -48,7 +48,9 @@ delete(node(X, node(Y, Left, Right), empty), X, node(Y, Left, Right )).
 
 %third case, father of two childs
 %delete(node(X, node(Y, YLeft, YRight), node(Z, _, _)), X, node(Y, node(YLeft, YRight, empty), Z )).
-delete(node(X, node(Y, YLeft, _), node(Z, ZLeft, _)), X, node(Y, YLeft, node(Z, ZLeft, empty ))).
+%delete(node(X, node(Y, YLeft, _), node(Z, ZLeft, ZRight)), X, node(Y, YLeft, node(Z, ZLeft, ZRight ))).
+delete(node(X, node(Y, YLeft, YRight), node(Z, ZLeft, ZRight)), X, node(Y, node(YLeft, YRight, empty), node(Z, ZLeft, ZRight ))).
+
 
 
 delete(node(X, node(Left, Lx, Ly), R), Key, node(X, Out, R)):-
